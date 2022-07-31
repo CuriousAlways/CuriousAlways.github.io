@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.2"
-group :jekyll_plugins do
-  gem 'jekyll-postcss', "~> 0.5.0"
-end
+gem 'jekyll-postcss'
+# group :jekyll_plugins do
+#   gem 'jekyll-postcss', "~> 0.5.0"
+# end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
