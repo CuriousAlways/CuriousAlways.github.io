@@ -1,0 +1,24 @@
+<div class="absolute">
+  <div class="w-screen relative transition-all duration-700 ease-linear -top-full" data-header="menu">
+    {% for item in site.data.navigation %}
+      <p class="{% if page.url == item.path %}
+                  bg-white-t-1/2 text-gray-900
+                {% else %}
+                  bg-gray-900-t-1/2 w-100 
+                {% endif %}
+                text-white text-center border-b border-white text-xl py-3">
+        <a href="{{item.path}}"> 
+          {{item.name | capitalize }}
+        </a>
+      </p>
+    {% endfor %}
+  </div>
+
+  <div class="flex justify-center mt-10 cursor-pointer" data-header="toggle-button">
+    <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+      <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
+</div>
