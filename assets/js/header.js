@@ -6,12 +6,12 @@ window.addEventListener('load', ()=>{
 
   HEADER_BUTTON.addEventListener('click', (ev)=>{
     if(header_visible) {
-      HEADER_MENU.classList.add('-top-full');
-      HEADER_MENU.classList.remove('top-0');
+      HEADER_MENU.classList.add('max-h-0');
+      HEADER_MENU.classList.remove('max-h-700');
     }
     else {
-      HEADER_MENU.classList.add('top-0');
-      HEADER_MENU.classList.remove('-top-full');
+      HEADER_MENU.classList.add('max-h-700');
+      HEADER_MENU.classList.remove('max-h-0');
     }
     header_visible = !header_visible
   })
