@@ -3,16 +3,4 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-
-.bg-gray-900-t-1\/2 {
-  	background-color: rgba(17, 24, 39, 0.5);
-}
-
-.bg-white-t-1\/2 {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.max-h-700 {
-  max-height: 700px;
-}
+@import "_sass/style.scss";

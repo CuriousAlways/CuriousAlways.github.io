@@ -1,8 +1,8 @@
 - name: home
   path: /
 
-- name: posts
-  path: /posts
+- name: blogs
+  path: /blogs
 
 - name: about
   path: /about

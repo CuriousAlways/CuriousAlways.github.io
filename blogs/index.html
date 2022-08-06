@@ -1,0 +1,57 @@
+---
+layout: default
+title: Raza's blogs
+---
+
+<div class="p-20">
+  <!-- display list of blogs for current page (#373a60)-->
+  {% for post in paginator.posts %}
+    {% if post.published %}
+      <div class="rounded card-purple p-4 my-3 shadow-2xl">
+        <h1 class="text-3xl"> <a href="{{ post.url }}" class="text-purple-400 hover:text-blue-400"> {{post.title}} </a></h1>
+        <div class="flex flex-row justify-between">
+          <p class="text-white">
+            <svg class="w-6 h-6 inline align-top text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            {{ post.date | date: "%B %-d, %Y" }} 
+          </p>
+
+          <p class="text-white">
+            <svg class="w-6 h-6 inline align-top text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            {{ post.author | capitalize }}
+          </p>
+        </div>
+        <div class="pt-2 text-white"> {{ post.excerpt | truncate: 180 }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <!-- end -->
+
+
+  <!-- display navigation links -->
+  {% if paginator.total_pages > 1 %}
+    <div class="text-center mt-6">
+      {% for page in (1..paginator.total_pages) %}
+        <!-- handle 1st page edge case for url -->
+        {% if page == 1 %}
+          {% assign path = '/blogs/index' %}
+        {% else %}
+          {% assign path = site.paginate_path | replace: ':num', page %}
+        {% endif %}
+
+        <!-- add css for active page -->
+        {% if page == paginator.page %}
+          {% assign klass = "text-white bg-blue-400 p-5 rounded" %}
+        {% else %}
+          {% assign klass = "text-white hover:bg-blue-400 p-5 rounded bg-purple-400" %}
+        {% endif %}
+        <a href="{{ path }}" class="{{ klass }}" > {{page}} </a>
+      {% endfor %}
+      <!-- do some magic -->
+    </div>
+  {% endif %}
+    
+  <!-- end -->
+</div>
+
+

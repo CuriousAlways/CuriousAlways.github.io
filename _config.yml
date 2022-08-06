@@ -26,6 +26,10 @@ url: 'https://curiousalways.github.io' # the base hostname & protocol for your s
 
 plugins:
     - jekyll-postcss
+    - jekyll-paginate
+
+paginate: 5
+paginate_path: "/blogs/:num/"
 
 sass:
     sass_dir: _sass
@@ -34,4 +38,4 @@ sass:
       - _sass
       - node_modules
 
-include: ["node_modules/tailwindcss"]
+# include: ["node_modules/tailwindcss"]

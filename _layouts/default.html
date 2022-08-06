@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include meta.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script src="{{ '/assets/js/header.js' | relative_url }}"></script>
+  </head>
+  <body>
+    <div class="bg-purple-main min-h-screen">
+      {% include header.html %}
+      {{content}}
+    </div>
+  </body>
+</html>
