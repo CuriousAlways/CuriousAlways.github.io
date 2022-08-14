@@ -171,7 +171,7 @@
   color: #990000;
   font-weight: bold;
 }
-.highlight .nf, .highlight .fm {
+.highlight .nf, .highlight .fm, .highlight .nx {
   color: #990000;
   font-weight: bold;
 }
@@ -209,5 +209,23 @@
   color: #bbbbbb;
 }
 .highlight {
-  background-color: #f8f8f8;
+  /*background-color: #f8f8f8;*/
+  background-color: #ffd9d9;
+}
+/* custom */ 
+.highlighter-rouge {
+  background-color: #FBCFE8;
+  color: #DB2777;
+  padding: 1px;
+  margin: 1rem 0;
+}
+
+.highlight .rouge-table .gl {
+  background-color: #FBCFE8;
+  color: #DB2777;
+  border-right: 2px solid #DB2777;
+}
+
+.highlight .p {
+  color: purple;
 }
